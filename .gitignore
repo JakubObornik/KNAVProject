@@ -28,3 +28,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# AI-generated planning and specification documents
+/docs/superpowers/**/*.md
