@@ -13,6 +13,14 @@ Ukázky a cvičení k předmětu **KNAV** (Univerzita Pardubice, KST, studijní 
 
 Celkem 23 vzorů. Na každém cvičení nejdřív krátce probereme, k čemu vzory jsou, a pak se společně díváme do kódu.
 
+## Podmínky předmětu
+
+**Docházka** na cvičení není povinná, ale zapisuji ji.
+
+**Odevzdávané příklady.** Z každého cvičení odevzdáte 2 příklady návrhových vzorů. Z těch, které jsme na cvičení probírali, si vyberete libovolné dva (z 1. cvičení například Singleton a Prototype) a každý z nich zpracujete jako vlastní příklad v Javě. Příklad musí být spustitelný projekt, který jde otevřít a spustit v IDE (např. IntelliJ IDEA). Pošlete ho mi e-mailem na adresu [jakub.obornik+knav@gmail.com](mailto:jakub.obornik+knav@gmail.com) nejpozději do příštího cvičení. Předmět e-mailu zapište ve tvaru „KNAV – cvičení 1 – Jméno Příjmení“. Za celý semestr tak odevzdáte 8 příkladů (2 × 4 cvičení). Kdo píše test na 4. (posledním) cvičení, vypracuje i 2 vzory ze 4. cvičení buď před ním, nebo přímo na tomto cvičení.
+
+**Zkouška** je písemný test v papírové podobě. Dostanete ho vytištěný a odpovídáte ručně na papír, včetně nakreslení diagramů tříd. Test má zhruba 12 otázek, na vypracování máte 60 minut a na úspěch stačí 50 %. Podrobnosti jsou v úvodní prezentaci ([`slides/00-uvod.pdf`](slides/00-uvod.pdf)).
+
 ## Struktura
 
 ```
