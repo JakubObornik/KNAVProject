@@ -6,6 +6,7 @@ Krátké prezentace ke cvičením ve formátu PDF. Nejdou do hloubky přednáše
 |---|---|
 | `00-uvod.pdf` | Úvod do předmětu, průběh cvičení, zkouška |
 | `01-kreativni-vzory.pdf` | Cvičení 1: Factory Method, Abstract Factory, Prototype, Builder, Singleton |
+| `02-strukturalni-vzory.pdf` | Cvičení 2: Adapter, Bridge, Composite, Decorator, Facade, Flyweight |
 
 Další prezentace přibývají s postupem semestru.
 
