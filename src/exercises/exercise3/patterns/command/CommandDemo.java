@@ -32,8 +32,7 @@ public final class CommandDemo {
     private static final class TextEditor {
         private String text = "";
         void write(String value) { text += value; }
-        String deleteLastWord() {
-            String before = text;
+        void deleteLastWord() {
             int end = text.length();
             while (end > 0 && Character.isWhitespace(text.charAt(end - 1))) end--;
             int start = end;
@@ -41,7 +40,6 @@ public final class CommandDemo {
             int cut = start;
             while (cut > 0 && Character.isWhitespace(text.charAt(cut - 1))) cut--;
             text = text.substring(0, cut);
-            return before;
         }
         String getText() { return text; }
         void restore(String value) { text = value; }
@@ -62,7 +60,7 @@ public final class CommandDemo {
         private String before;
 
         private DeleteTextCommand(TextEditor editor) { this.editor = editor; }
-        public void execute() { before = editor.deleteLastWord(); }
+        public void execute() { before = editor.getText(); editor.deleteLastWord(); }
         public void undo() { editor.restore(before); }
     }
 

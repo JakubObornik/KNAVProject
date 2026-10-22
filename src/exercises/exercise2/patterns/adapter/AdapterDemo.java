@@ -15,7 +15,7 @@ public final class AdapterDemo {
     private AdapterDemo() {
     }
 
-        public static void run() {
+    public static void run() {
         JsonDataService service = new XmlToJsonAdapter(
                 new XmlDataService("<user><name>Ada</name><city>Prague</city><note>first&#10;second&#9;row</note></user>"));
         System.out.println(service.getJsonData());
