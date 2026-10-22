@@ -21,7 +21,11 @@ public final class DecoratorDemo {
         String getContent();
     }
 
-    private record SimpleMessage(String getContent) implements Message {
+    private static final class SimpleMessage implements Message {
+        private final String content;
+
+        private SimpleMessage(String content) { this.content = content; }
+        public String getContent() { return content; }
     }
 
     private abstract static class MessageDecorator implements Message {

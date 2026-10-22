@@ -31,11 +31,17 @@ public final class CompositeDemo {
         void showDetails(String indentation);
     }
 
-    private record Employee(String getName, double getSalary) implements EmployeeComponent {
+    private static final class Employee implements EmployeeComponent {
+        private final String name;
+        private final double salary;
+
+        private Employee(String name, double salary) { this.name = name; this.salary = salary; }
+        public String getName() { return name; }
+        public double getSalary() { return salary; }
         public void add(EmployeeComponent component) { throw new UnsupportedOperationException("Employee has no reports"); }
         public void remove(EmployeeComponent component) { throw new UnsupportedOperationException("Employee has no reports"); }
         public void showDetails(String indentation) {
-            System.out.println(indentation + "Employee: " + getName + ", salary: " + getSalary);
+            System.out.println(indentation + "Employee: " + name + ", salary: " + salary);
         }
     }
 
