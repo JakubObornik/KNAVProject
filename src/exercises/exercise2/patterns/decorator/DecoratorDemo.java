@@ -13,7 +13,7 @@ public final class DecoratorDemo {
         System.out.println("Compressed: " + new CompressionDecorator(message).getContent());
         System.out.println("With word count: " + new WordCountDecorator(message).getContent());
         Message composed = new WordCountDecorator(
-                new CompressionDecorator(new EncryptionDecorator(message)));
+                new EncryptionDecorator(new CompressionDecorator(message)));
         System.out.println("Composed: " + composed.getContent());
     }
 
