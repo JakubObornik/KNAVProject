@@ -21,6 +21,11 @@ public final class CompositeDemo {
         headOffice.add(sales);
         headOffice.showDetails("");
         System.out.println("Total salary: " + headOffice.getSalary());
+
+        headOffice.remove(sales);
+        System.out.println("\nAfter removing " + sales.getName() + ":");
+        headOffice.showDetails("");
+        System.out.println("Total salary: " + headOffice.getSalary());
     }
 
     private interface EmployeeComponent {
@@ -41,7 +46,7 @@ public final class CompositeDemo {
         public void add(EmployeeComponent component) { throw new UnsupportedOperationException("Employee has no reports"); }
         public void remove(EmployeeComponent component) { throw new UnsupportedOperationException("Employee has no reports"); }
         public void showDetails(String indentation) {
-            System.out.println(indentation + "Employee: " + name + ", salary: " + salary);
+            System.out.println(indentation + "Employee: " + getName() + ", salary: " + getSalary());
         }
     }
 
@@ -55,7 +60,7 @@ public final class CompositeDemo {
         public void add(EmployeeComponent component) { members.add(component); }
         public void remove(EmployeeComponent component) { members.remove(component); }
         public void showDetails(String indentation) {
-            System.out.println(indentation + "Department: " + name);
+            System.out.println(indentation + "Department: " + getName());
             members.forEach(member -> member.showDetails(indentation + "  "));
         }
     }
